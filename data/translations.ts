@@ -199,8 +199,8 @@ const translations = {
       info: {
         title: 'Contact Information',
         address: 'Campania, Italy',
-        email: 'info@rollsroyceluxuryrentals.com',
-        phone: '+39 123 456 7890',
+        email: 'info@rollsroycerent.it',
+        phone: '+39 3791398291',
         hours: 'Available 7 days a week, 9:00 AM - 8:00 PM',
       },
       cta: {
@@ -407,8 +407,8 @@ const translations = {
       info: {
         title: 'Informazioni di Contatto',
         address: 'Campania, Italia',
-        email: 'info@rollsroyceluxuryrentals.com',
-        phone: '+39 123 456 7890',
+        email: 'info@rollsroycerent.it',
+        phone: '+39 3791398291',
         hours: 'Disponibile 7 giorni su 7, 9:00 - 20:00',
       },
       cta: {

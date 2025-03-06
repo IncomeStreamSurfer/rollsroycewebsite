@@ -147,11 +147,14 @@ export default function Footer({ locale }: FooterProps) {
             {translations.common.copyright.replace('2025', currentYear.toString())}
           </p>
           <div className="flex space-x-6">
-            <Link href="#" className="text-gray-400 hover:text-gold text-sm transition-colors">
+            <Link href={`/${locale}/privacy-policy`} className="text-gray-400 hover:text-gold text-sm transition-colors">
               {translations.common.privacyPolicy}
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-gold text-sm transition-colors">
+            <Link href={`/${locale}/terms-of-service`} className="text-gray-400 hover:text-gold text-sm transition-colors">
               {translations.common.termsOfService}
+            </Link>
+            <Link href={`/${locale}/terms-and-conditions`} className="text-gray-400 hover:text-gold text-sm transition-colors">
+              {locale === 'en' ? 'Terms & Conditions' : 'Termini e Condizioni'}
             </Link>
           </div>
         </div>

@@ -17,9 +17,9 @@ export default function ServiceCard({ locale, service, imageUrl }: ServiceCardPr
   
   // Default images for each service if not provided
   const defaultImages: Record<Service, string> = {
-    'birthdays': '/images/rolls_royce_logo_initials.png',
-    'weddings': '/images/wedding_photo_in_abdondoned_car_park.jpg',
-    'private-parties': '/images/Rolls_royce_motorcars_logo.svg.png',
+    'birthdays': '/images/happy_birthday_image_for_home_page.jpg',
+    'weddings': '/images/married_couple_holding_hands_over_rolls_royce_logo.jpg',
+    'private-parties': '/images/wedding_photo_in_abdondoned_car_park.jpg',
   };
   
   const image = imageUrl || defaultImages[service];

@@ -43,8 +43,8 @@ export default function EnglishBirthdaysPage() {
               </div>
               <div className="relative h-80 md:h-96">
                 <Image
-                  src="/images/wedding_photo_in_abdondoned_car_park.jpg"
-                  alt="Rolls-Royce for Birthdays"
+                  src="/images/happy_birthday_image_for_home_page.jpg"
+                  alt="Rolls-Royce for Birthday Celebrations"
                   fill
                   className="object-cover rounded-lg"
                   sizes="(max-width: 768px) 100vw, 50vw"

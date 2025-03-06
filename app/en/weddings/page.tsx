@@ -45,8 +45,8 @@ export default function EnglishWeddingsPage() {
               </div>
               <div className="relative h-80 md:h-96">
                 <Image
-                  src="/images/wedding_photo_in_abdondoned_car_park.jpg"
-                  alt="Rolls-Royce for Weddings"
+                  src="/images/married_couple_holding_hands_over_rolls_royce_logo.jpg"
+                  alt="Married Couple with Rolls-Royce"
                   fill
                   className="object-cover rounded-lg"
                   sizes="(max-width: 768px) 100vw, 50vw"
