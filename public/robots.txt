@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.rollsroycerent.it/
-
-# Sitemaps
-Sitemap: https://www.rollsroycerent.it/sitemap.xml
