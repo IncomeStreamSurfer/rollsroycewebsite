@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://rollsroyceluxuryrentals.com',
+  siteUrl: process.env.SITE_URL || 'https://www.rollsroycerent.it',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
@@ -13,11 +13,11 @@ module.exports = {
   exclude: ['/404', '/500'],
   alternateRefs: [
     {
-      href: 'https://rollsroyceluxuryrentals.com/en',
+      href: 'https://www.rollsroycerent.it/en',
       hreflang: 'en',
     },
     {
-      href: 'https://rollsroyceluxuryrentals.com/it',
+      href: 'https://www.rollsroycerent.it/it',
       hreflang: 'it',
     },
   ],
