@@ -16,7 +16,7 @@ export default function Footer({ locale }: FooterProps) {
   return (
     <footer className="bg-navy-dark text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and About */}
           <div>
             <div className="flex items-center mb-4">
@@ -112,32 +112,6 @@ export default function Footer({ locale }: FooterProps) {
                 <span>{translations.contact.info.hours}</span>
               </li>
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 font-playfair">
-              {locale === 'en' ? 'Newsletter' : 'Newsletter'}
-            </h3>
-            <p className="text-gray-300 mb-4">
-              {locale === 'en' 
-                ? 'Subscribe to our newsletter for exclusive offers and updates.'
-                : 'Iscriviti alla nostra newsletter per offerte esclusive e aggiornamenti.'
-              }
-            </p>
-            <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder={locale === 'en' ? 'Your email address' : 'Il tuo indirizzo email'} 
-                className="px-4 py-2 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
-              />
-              <button 
-                type="submit" 
-                className="bg-gold hover:bg-gold/90 text-white px-4 py-2 rounded-md transition-colors"
-              >
-                {locale === 'en' ? 'Subscribe' : 'Iscriviti'}
-              </button>
-            </form>
           </div>
         </div>
 

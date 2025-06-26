@@ -1,73 +1,20 @@
 import { Locale, Service } from '../types';
 import { getServiceSlug } from './i18n';
 
-// Define the locations from the task
-export const locations = [
-  { region: 'Region of Campania', province: 'Region of Campania', city: 'Campania', slug: 'campania' },
-  { region: 'Province of Avellino', province: 'Province of Avellino', city: 'Avellino', slug: 'avellino' },
-  { region: 'Province of Avellino', province: 'Province of Avellino', city: 'Ariano Irpino', slug: 'ariano-irpino' },
-  { region: 'Province of Avellino', province: 'Province of Avellino', city: 'Montoro', slug: 'montoro' },
-  { region: 'Province of Benevento', province: 'Province of Benevento', city: 'Benevento', slug: 'benevento' },
-  { region: 'Province of Benevento', province: 'Province of Benevento', city: 'Montesarchio', slug: 'montesarchio' },
-  { region: 'Province of Benevento', province: 'Province of Benevento', city: 'San Giorgio del Sannio', slug: 'san-giorgio-del-sannio' },
-  { region: 'Province of Caserta', province: 'Province of Caserta', city: 'Caserta', slug: 'caserta' },
-  { region: 'Province of Caserta', province: 'Province of Caserta', city: 'Aversa', slug: 'aversa' },
-  { region: 'Province of Caserta', province: 'Province of Caserta', city: 'Marcianise', slug: 'marcianise' },
-  { region: 'Province of Salerno', province: 'Province of Salerno', city: 'Salerno', slug: 'salerno' },
-  { region: 'Province of Salerno', province: 'Province of Salerno', city: 'Cava de\' Tirreni', slug: 'cava-de-tirreni' },
-  { region: 'Province of Salerno', province: 'Province of Salerno', city: 'Battipaglia', slug: 'battipaglia' },
-  { region: 'Metropolitan City of Naples', province: 'Metropolitan City of Naples', city: 'Naples', slug: 'naples' },
-  { region: 'Metropolitan City of Naples', province: 'Metropolitan City of Naples', city: 'Giugliano in Campania', slug: 'giugliano-in-campania' },
-  { region: 'Metropolitan City of Naples', province: 'Metropolitan City of Naples', city: 'Torre del Greco', slug: 'torre-del-greco' },
-];
+// Import locations from data/locations.ts instead of duplicating them
+import locationsData from '../data/locations';
+
+// Re-export the locations
+export const locations = locationsData;
 
 // Define the services
 export const services: Service[] = ['birthdays', 'weddings', 'private-parties'];
 
-// Location slug translations
-export const locationSlugTranslations = {
-  en: {
-    'campania': 'campania',
-    'avellino': 'avellino',
-    'ariano-irpino': 'ariano-irpino',
-    'montoro': 'montoro',
-    'benevento': 'benevento',
-    'montesarchio': 'montesarchio',
-    'san-giorgio-del-sannio': 'san-giorgio-del-sannio',
-    'caserta': 'caserta',
-    'aversa': 'aversa',
-    'marcianise': 'marcianise',
-    'salerno': 'salerno',
-    'cava-de-tirreni': 'cava-de-tirreni',
-    'battipaglia': 'battipaglia',
-    'naples': 'naples',
-    'giugliano-in-campania': 'giugliano-in-campania',
-    'torre-del-greco': 'torre-del-greco',
-  },
-  it: {
-    'campania': 'campania',
-    'avellino': 'avellino',
-    'ariano-irpino': 'ariano-irpino',
-    'montoro': 'montoro',
-    'benevento': 'benevento',
-    'montesarchio': 'montesarchio',
-    'san-giorgio-del-sannio': 'san-giorgio-del-sannio',
-    'caserta': 'caserta',
-    'aversa': 'aversa',
-    'marcianise': 'marcianise',
-    'salerno': 'salerno',
-    'cava-de-tirreni': 'cava-de-tirreni',
-    'battipaglia': 'battipaglia',
-    'naples': 'napoli',
-    'giugliano-in-campania': 'giugliano-in-campania',
-    'torre-del-greco': 'torre-del-greco',
-  },
-};
+// Import location slug translations from data/locations.ts
+import { locationSlugTranslations, getLocationSlug as getLocationSlugFromData } from '../data/locations';
 
-// Function to get location slug by locale
-export function getLocationSlug(location: string, locale: Locale): string {
-  return locationSlugTranslations[locale][location as keyof typeof locationSlugTranslations['en']] || location;
-}
+// Re-export the function
+export const getLocationSlug = getLocationSlugFromData;
 
 // Generate all possible service+location combinations for static paths
 export function generateServiceLocationPaths() {

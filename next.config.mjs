@@ -10,6 +10,8 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  // Enable standalone output for Docker
+  output: 'standalone',
 };
 
 export default nextConfig;
